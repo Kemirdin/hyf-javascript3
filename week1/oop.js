@@ -2,53 +2,63 @@
 
 class Movie {
   constructor(title, director) {
-    // add your code here
-      this.director = director;  
+    
+    this.director = director; 
+    this.title = title;
+    this.stars = [];
+    this.writer = [];
+    this.rating = [];
+    
+    
   }
 
     getTitle() {
-        // add your code here
+        
         return this.title
     }
   
 
   getDirector() {
-    // add your code here
+    
     return this.director  
       
   }
 
   addStar(star) {
-    // add your code here
+    
+    this.stars.push(star);
       
   }
 
   getStars() {
-    // add your code here
+    return this.stars;
   }
 
   addWriter(writer) {
-    // add your code here
+    this.writer.push(writer);
   }
 
   getWriters() {
-    // add your code here
+    return this.writer;
   }
 
   addRating(rating) {
-    // add your code here
+    this.rating.push(writer);
   }
 
   getAverageRating() {
-    // add your code here
-  }
-
-  // ... Add yours :-) Look to IMDB for inspiration
+           let rateAverage = 0;
+           for (let i = 0; i < this.rating.length; i++) {
+             rateAverage += this.rating[i];
+           }
+           return `The Rating: ${rateAverage / this.rating.length}`;
 }
 
 class StaffMember {
   constructor(name, role, dateOfBirth) {
-    // add your code here
+     this.name = name;
+     this.rol = rol;
+     this.birth = new Date(birth);
   }
 
   addMovie(movie) {
