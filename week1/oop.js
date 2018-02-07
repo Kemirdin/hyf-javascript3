@@ -6,17 +6,21 @@ class Movie {
       this.director = director;  
   }
 
-  getTitle() {
-    // add your code here
-      
-  }
+    getTitle() {
+        // add your code here
+        return this.title
+    }
+  
 
   getDirector() {
     // add your code here
+    return this.director  
+      
   }
 
   addStar(star) {
     // add your code here
+      
   }
 
   getStars() {
