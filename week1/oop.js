@@ -43,7 +43,7 @@ class Movie {
   }
 
   addRating(rating) {
-    this.rating.push(writer);
+    this.rating.push(rating);
   }
 
   getAverageRating() {
@@ -58,23 +58,23 @@ class StaffMember {
   constructor(name, role, dateOfBirth) {
      this.name = name;
      this.rol = rol;
-     this.birth = new Date(birth);
+     this.dateOfBirth = dateOfBirth;
   }
 
   addMovie(movie) {
-    // add your code here
+    this.movie.push(movie);
   }
 
   getName() {
-    // add your code here
+    return this.name;
   }
 
   getRole() {
-    // add your code here
+    return this.role;
   }
 
   getAge() {
-    // add your code here
+    return this.age;
   }
 }
 
