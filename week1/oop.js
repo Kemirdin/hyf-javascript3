@@ -1,10 +1,14 @@
+'use strict';
+
 class Movie {
   constructor(title, director) {
     // add your code here
+      this.director = director;  
   }
 
   getTitle() {
     // add your code here
+      
   }
 
   getDirector() {
