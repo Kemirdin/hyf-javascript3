@@ -16,7 +16,7 @@ class Movie {
 
     getTitle() {
         
-      return this.title = title;
+      return `Title of the film is: ${this.title}`;
     }
   
 
