@@ -87,7 +87,7 @@ class StaffMember {
 // Pick your favorite movie from http://www.imdb.com/
 //here i declared new movie PrisonBreak, and the all properties of my movie//
 const PrisonBreak = new Movie('PrisonBreak', 'Paul_Scheuring');
-
+const Writers = PrisonBreak.addWriter
 const Dominic_Purcell = new StaffMember(...);
 const Wentworth_Miller = new StaffMember(...);
 const Robert_Knepper = new StaffMember(...);
