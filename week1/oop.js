@@ -16,13 +16,13 @@ class Movie {
 
     getTitle() {
         
-      return `Film title: ${this.title}`;
+      return `Movie title: ${this.title}`;
     }
   
 
   getDirector() {
     
-    return `  Film director: ${this.director}`;
+    return `  Movie director: ${this.director}`;
       
   }
 
@@ -34,7 +34,7 @@ class Movie {
   }
 
   getStars() {
-    return this.stars;
+    return `Movie Stars: ${this.star}`;
   }
 
   addWriter(writer) {
@@ -42,7 +42,7 @@ class Movie {
   }
 
   getWriters() {
-    return this.writer;
+    return `Movie writer: ${this.writer}`;
   }
 
   addRating(rating) {
