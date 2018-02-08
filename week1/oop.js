@@ -1,7 +1,7 @@
 'use strict';
   <!-- 🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥 -->
 
-
+//first my class Movies//
 class Movie {
   constructor(title, director) {
     
@@ -70,24 +70,29 @@ class StaffMember {
   }
 
   getName() {
-    return this.name;
+    return `Actor: ${this.name}`;
   }
 
   getRole() {
-    return this.role;
+    return `Rol: ${this.rol}`;
   }
 
   getAge() {
-    return this.age;
+    let currentYear = new Date().getFullYear();
+    return `Age: ${currentYear - this.birth.getFullYear()}`;
   }
 }
 
 // Pick your favorite movie from http://www.imdb.com/
+//here i declared new movie PrisonBreak, and the all properties of my movie//
+const PrisonBreak = new Movie('PrisonBreak');
 
-const myMovie = new Movie(...);
-
-const firstActor = new StaffMember(...);
-myMovie.addStar(firstActor);
+const Dominic_Purcell = new StaffMember(...);
+const Wentworth_Miller = new StaffMember(...);
+const Robert_Knepper = new StaffMember(...);
+PrisonBreak.addStar(Dominic_Purcell);
+PrisonBreak.addStar(Wentworth_Miller);
+PrisonBreak.addStar(Robert_Knepper);
 // create and add more staff members
 
 // Make sure that the following actions work.
