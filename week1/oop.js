@@ -57,6 +57,7 @@ class Movie {
            return `The Rating: ${rateAverage / this.rating.length}`;
 }
 
+//second my class Staff//
 class StaffMember {
   constructor(name, role, dateOfBirth) {
      this.name = name;
