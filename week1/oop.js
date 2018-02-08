@@ -16,13 +16,13 @@ class Movie {
 
     getTitle() {
         
-        return this.title
+      return this.getTitle = title;
     }
   
 
   getDirector() {
     
-    return this.director  
+    return this.getDirector = director; 
       
   }
 
