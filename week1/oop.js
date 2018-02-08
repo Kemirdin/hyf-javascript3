@@ -22,9 +22,10 @@ class Movie {
 
   getDirector() {
     
-    return this.director = director; 
+    return `  Film director: ${this.director}`;
       
   }
+
 
   addStar(star) {
     
