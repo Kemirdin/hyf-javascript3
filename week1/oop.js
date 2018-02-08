@@ -33,7 +33,7 @@ class Movie {
   }
 
   getStars() {
-    return this.stars;
+    return this.getStars;
   }
 
   addWriter(writer) {
