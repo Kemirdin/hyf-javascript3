@@ -16,13 +16,13 @@ class Movie {
 
     getTitle() {
         
-      return this.getTitle = title;
+      return this.title = title;
     }
   
 
   getDirector() {
     
-    return this.getDirector = director; 
+    return this.director = director; 
       
   }
 
@@ -33,7 +33,7 @@ class Movie {
   }
 
   getStars() {
-    return this.getStars;
+    return this.stars;
   }
 
   addWriter(writer) {
