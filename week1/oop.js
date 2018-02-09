@@ -35,7 +35,7 @@ class Movie {
   }
 
 
-  addStar(star) {
+  addStars(star) {
     
     this.stars.push(star);
       
@@ -117,9 +117,9 @@ Nicholas_Wootton.addMovie('Prison Break');
 // adding information for a movie
 
 const PrisonBreak = new Movie('Prison Break');
-PrisonBreak.addStar(Dominic_Purcell);
-PrisonBreak.addStar(Wentworth_Miller);
-PrisonBreak.addStar(Robert_Knepper);
+PrisonBreak.addStars(Dominic_Purcell);
+PrisonBreak.addStars(Wentworth_Miller);
+PrisonBreak.addStars(Robert_Knepper);
 PrisonBreak.addWriter(Nicholas_Wootton);
 PrisonBreak.addDirector(Paul_Scheuring);
 PrisonBreak.addRating(10);
