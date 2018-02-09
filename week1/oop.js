@@ -150,6 +150,6 @@ space ();
 
 
 
-console.log(PrisonBreak.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
-const director = PrisonBreak.getDirector();
+console.log(Movie.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
+const director = Movie.getDirector();
 console.log(`Director: ${director.map(director => `${director.getName()}`)}`);
