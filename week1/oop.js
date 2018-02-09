@@ -84,7 +84,7 @@ class movieStaff {
   }
 
   getRole() {
-    return `Rol: ${this.rol}`;
+    return `Role: ${this.role}`;
   }
 
   getAge() {
