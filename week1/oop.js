@@ -116,7 +116,7 @@ const PrisonBreak = new Movie('Prison Break');
 PrisonBreak.addStar(Dominic_Purcell);
 PrisonBreak.addStar(Wentworth_Miller);
 PrisonBreak.addStar(Robert_Knepper);
-PrisonBreak.addWriter(Nicholas_Wootton)
+PrisonBreak.addWriter(Nicholas_Wootton);
 PrisonBreak.addRating(10);
 PrisonBreak.addRating(9.9);
 PrisonBreak.addRating(9.8);
