@@ -7,9 +7,9 @@ class Movie {
     
     this.director = director; 
     this.title = title;
-    this.stars = [];
-    this.writer = [];
-    this.rating = [];
+    this.stars =stars;
+    this.writer = writer;
+    this.rating = rating;
     
     
   }
