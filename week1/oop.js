@@ -3,7 +3,7 @@
  console.log("===================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥====================");
 //first my class Movies//
 class Movie {
-  constructor(title, director) {
+  constructor(title, director, stars = [], writer = [],  rating = []) {
     
     this.director = director; 
     this.title = title;
