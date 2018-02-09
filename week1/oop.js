@@ -121,7 +121,7 @@ PrisonBreak.addStars(Dominic_Purcell);
 PrisonBreak.addStars(Wentworth_Miller);
 PrisonBreak.addStars(Robert_Knepper);
 PrisonBreak.addWriter(Nicholas_Wootton);
-PrisonBreak.addDirector(Paul_Scheuring);
+// PrisonBreak.addDirector(Paul_Scheuring);
 PrisonBreak.addRating(10);
 PrisonBreak.addRating(9.9);
 PrisonBreak.addRating(9.8);
@@ -132,11 +132,11 @@ PrisonBreak.addRating (9.6);
 
 //checking the methods
 
-console.log (PrisonBreak.stars);
+console.log (PrisonBreak.getStars());
 space ();
 console.log (PrisonBreak.getTitle ());
- console.log (PrisonBreak.getRating ());
-console.log (PrisonBreak.getWriter()) ;
+ console.log (PrisonBreak.getAverageRating());
+console.log (PrisonBreak.getWriters()) ;
 console.log (PrisonBreak.getDirector ());
 space ();
 
