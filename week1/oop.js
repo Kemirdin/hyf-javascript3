@@ -94,6 +94,8 @@ class movieStaff {
 // Pick your favorite movie from http://www.imdb.com/
 //here i declared new movie PrisonBreak, and the all properties of my movie//
 
+
+
 // adding some staff
 let Paul_Scheuring = new movieStaff('Paul Scheuring', 'director', 'November 20, 1968');
 let Dominic_Purcell = new movieStaff('Dominic Purcell', 'actor', '17 February 1970');
@@ -105,9 +107,7 @@ let Wentworth_Miller = new movieStaff('Wentworth Miller','actor','June 2, 1972')
 
 
 
-const Dominic_Purcell = new StaffMember(...);
-const Wentworth_Miller = new StaffMember(...);
-const Robert_Knepper = new StaffMember(...);
+
 // adding information for a movie
 
 const PrisonBreak = new Movie('Prison Break');
