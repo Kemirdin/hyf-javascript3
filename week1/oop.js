@@ -94,16 +94,36 @@ class movieStaff {
 // Pick your favorite movie from http://www.imdb.com/
 //here i declared new movie PrisonBreak, and the all properties of my movie//
 
-// adding information for a movie
+// adding some staff
 
-const PrisonBreak = new Movie('PrisonBreak', 'Paul_Scheuring');
-PrisonBreak.addStar(Dominic_Purcell);
-PrisonBreak.addStar(Wentworth_Miller);
-PrisonBreak.addStar(Robert_Knepper);
+
+
+
+
+
+
 const Dominic_Purcell = new StaffMember(...);
 const Wentworth_Miller = new StaffMember(...);
 const Robert_Knepper = new StaffMember(...);
 // adding information for a movie
+
+const PrisonBreak = new Movie('PrisonBreak');
+PrisonBreak.addStar(Dominic_Purcell);
+PrisonBreak.addStar(Wentworth_Miller);
+PrisonBreak.addStar(Robert_Knepper);
+PrisonBreak.addWriter('Paul_Scheuring')
+PrisonBreak.addRating(10);
+PrisonBreak.addRating(9.9);
+PrisonBreak.addRating(9.8);
+PrisonBreak.addRating(9.7);
+PrisonBreak.addRating (9.6);
+
+
+
+
+
+
+
 
 // create and add more staff members
 const Writers = PrisonBreak.addWriter('Paul_Scheuring');
