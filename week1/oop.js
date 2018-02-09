@@ -89,7 +89,7 @@ class movieStaff {
 
   getAge() {
     let currentYear = new Date().getFullYear();
-    return `Age: ${currentYear - this.birth.getFullYear()}`;
+    return `Age: ${currentYear - this.dateOfBirth.getFullYear()}`;
   }
 }
 
@@ -144,12 +144,9 @@ space ();
 // checking the Staff methods
 console.log (Robert_Knepper.getName ());
 console.log (Robert_Knepper.getRole ());
-console.log (Robert_Knepper.getAge);
+console.log (Robert_Knepper.getAge());
 space ();
 
 
 
 
-// console.log(PrisonBreak.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
-// const director = PrisonBreak.getDirector();
-// console.log(`Director: ${director.map(director => `${director.getName()}`)}`);
