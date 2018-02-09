@@ -130,7 +130,7 @@ PrisonBreak.addRating (9.6);
 console.log (PrisonBreak.stars);
 space ();
 console.log (PrisonBreak.getTitle ());
-console.log (PrisonBreak.getRating ());
+// console.log (PrisonBreak.getRating ());
 console.log (PrisonBreak.getWriter ());
 console.log (PrisonBreak.getDirector ());
 space ();
