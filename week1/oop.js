@@ -2,7 +2,7 @@
 
 var space = function () {
   console.log (""); // a program to make spaces in the console
-  console.log ("====================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥===================");
+  console.log ("==================== 🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥 ===================");
   console.log ("");
 }
 space ();
