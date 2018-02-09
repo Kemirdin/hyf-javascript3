@@ -35,14 +35,14 @@ class Movie {
   }
 
 
-  addStar(star) {
+  addStar(name) {
     
-    this.stars.push(star);
+    this.names.push(name);
       
   }
 
   getStars() {
-    return `Movie Stars: ${this.star}`;
+    return `Movie Stars: ${this.stars}`;
   }
 
   addWriter(writer) {
@@ -127,20 +127,20 @@ PrisonBreak.addRating (9.6);
 
 // checking the methods
 
-console.log (PrisonBreak.stars);
-space ();
-console.log (PrisonBreak.getTitle ());
-// console.log (PrisonBreak.getRating ());
-console.log (PrisonBreak.getWriter ());
-console.log (PrisonBreak.getDirector ());
-space ();
+// console.log (PrisonBreak.stars);
+// space ();
+// console.log (PrisonBreak.getTitle ());
+// // console.log (PrisonBreak.getRating ());
+// console.log (PrisonBreak.getWriter) ;
+// console.log (PrisonBreak.getDirector ());
+// space ();
 
 
-// checking the Staff methods
-console.log (Robert_Knepper.getName ());
-console.log (Robert_Knepper.getRole ());
-console.log (Robert_Knepper.getAge);
-space ();
+// // checking the Staff methods
+// console.log (Robert_Knepper.getName ());
+// console.log (Robert_Knepper.getRole ());
+// console.log (Robert_Knepper.getAge);
+// space ();
 
 
 
