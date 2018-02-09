@@ -1,4 +1,5 @@
 'use strict';
+
 let space = function () {
   console.log (''); // a program to make spaces in the console
   console.log ('====================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥===================');
@@ -69,7 +70,7 @@ class Movie {
 class movieStaff {
   constructor(name, role, dateOfBirth) {
      this.name = name;
-     this.rol = rol;
+     this.role = role;
     this.dateOfBirth = new Date(dateOfBirth);
     this.movie = [];
   }
@@ -115,7 +116,7 @@ const PrisonBreak = new Movie('Prison Break');
 PrisonBreak.addStar(Dominic_Purcell);
 PrisonBreak.addStar(Wentworth_Miller);
 PrisonBreak.addStar(Robert_Knepper);
-PrisonBreak.addWriter('Nicholas_Wootton')
+PrisonBreak.addWriter(Nicholas_Wootton)
 PrisonBreak.addRating(10);
 PrisonBreak.addRating(9.9);
 PrisonBreak.addRating(9.8);
