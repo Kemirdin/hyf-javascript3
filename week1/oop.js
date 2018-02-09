@@ -65,7 +65,7 @@ class Movie {
 }
 
 //second my class Staff//
-class StaffMember {
+class movieStaff {
   constructor(name, role, dateOfBirth) {
      this.name = name;
      this.rol = rol;
@@ -93,6 +93,9 @@ class StaffMember {
 
 // Pick your favorite movie from http://www.imdb.com/
 //here i declared new movie PrisonBreak, and the all properties of my movie//
+
+// adding information for a movie
+
 const PrisonBreak = new Movie('PrisonBreak', 'Paul_Scheuring');
 PrisonBreak.addStar(Dominic_Purcell);
 PrisonBreak.addStar(Wentworth_Miller);
