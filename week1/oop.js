@@ -35,9 +35,9 @@ class Movie {
   }
 
 
-  addStar(name) {
+  addStar(star) {
     
-    this.names.push(name);
+    this.names.push(star);
       
   }
 
