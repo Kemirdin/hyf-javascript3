@@ -37,7 +37,7 @@ class Movie {
 
   addStar(star) {
     
-    this.names.push(star);
+    this.name.push(star);
       
   }
 
@@ -130,7 +130,7 @@ PrisonBreak.addRating (9.6);
 
 
 
-checking the methods
+//checking the methods
 
 console.log (PrisonBreak.stars);
 space ();
