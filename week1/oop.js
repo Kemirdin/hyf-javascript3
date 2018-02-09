@@ -130,15 +130,15 @@ PrisonBreak.addRating (9.6);
 
 
 
-// checking the methods
+checking the methods
 
-// console.log (PrisonBreak.stars);
-// space ();
-// console.log (PrisonBreak.getTitle ());
-// // console.log (PrisonBreak.getRating ());
-// console.log (PrisonBreak.getWriter) ;
-// console.log (PrisonBreak.getDirector ());
-// space ();
+console.log (PrisonBreak.stars);
+space ();
+console.log (PrisonBreak.getTitle ());
+// console.log (PrisonBreak.getRating ());
+console.log (PrisonBreak.getWriter) ;
+console.log (PrisonBreak.getDirector ());
+space ();
 
 
 // // checking the Staff methods
