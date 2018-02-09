@@ -117,6 +117,7 @@ PrisonBreak.addStar(Dominic_Purcell);
 PrisonBreak.addStar(Wentworth_Miller);
 PrisonBreak.addStar(Robert_Knepper);
 PrisonBreak.addWriter(Nicholas_Wootton);
+PrisonBreak.addDirector(Paul_Scheuring);
 PrisonBreak.addRating(10);
 PrisonBreak.addRating(9.9);
 PrisonBreak.addRating(9.8);
