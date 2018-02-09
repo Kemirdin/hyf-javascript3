@@ -87,16 +87,16 @@ class StaffMember {
 // Pick your favorite movie from http://www.imdb.com/
 //here i declared new movie PrisonBreak, and the all properties of my movie//
 const PrisonBreak = new Movie('PrisonBreak', 'Paul_Scheuring');
-const Writers = PrisonBreak.addWriter('Paul_Scheuring');
+PrisonBreak.addStar(Dominic_Purcell);
+PrisonBreak.addStar(Wentworth_Miller);
+PrisonBreak.addStar(Robert_Knepper);
 const Dominic_Purcell = new StaffMember(...);
 const Wentworth_Miller = new StaffMember(...);
 const Robert_Knepper = new StaffMember(...);
 // adding information for a movie
-PrisonBreak.addStar(Dominic_Purcell);
-PrisonBreak.addStar(Wentworth_Miller);
-PrisonBreak.addStar(Robert_Knepper);
-// create and add more staff members
 
+// create and add more staff members
+const Writers = PrisonBreak.addWriter('Paul_Scheuring');
 // Make sure that the following actions work.
 console.log(myMovie.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
 const director = myMovie.getDirector();
