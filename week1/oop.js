@@ -53,8 +53,8 @@ class Movie {
     return `Movie writer: ${this.writer}`;
   }
 
-  addRating(rating) {
-    this.rating.push(rating);
+  addRating(num) {
+    this.rating.push(num);
   }
 
   getAverageRating() {
