@@ -1,13 +1,13 @@
 'use strict';
 let space = function () {
   console.log (''); // a program to make spaces in the console
-  console.log ('=======================================');
+  console.log ('====================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥===================');
   console.log ('');
 };
 space ();
 
 
- console.log("====================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥===================");
+ 
 //first my class Movies//
 class Movie {
   constructor(title, director, stars = [], writer = [], rating = []) {
