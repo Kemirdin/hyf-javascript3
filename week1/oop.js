@@ -95,6 +95,9 @@ class movieStaff {
 //here i declared new movie PrisonBreak, and the all properties of my movie//
 
 // adding some staff
+let Paul_Scheuring = new movieStaff('Paul Scheuring', 'director', 'November 20, 1968');
+let Dominic_Purcell = new movieStaff('Dominic Purcell', 'actor', '17 February 1970');
+let Robert_Knepper = new movieStaff('Robert Knepper', 'actor', 'July 8, 1959');
 
 
 
@@ -107,11 +110,11 @@ const Wentworth_Miller = new StaffMember(...);
 const Robert_Knepper = new StaffMember(...);
 // adding information for a movie
 
-const PrisonBreak = new Movie('PrisonBreak');
+const PrisonBreak = new Movie('Prison Break');
 PrisonBreak.addStar(Dominic_Purcell);
 PrisonBreak.addStar(Wentworth_Miller);
 PrisonBreak.addStar(Robert_Knepper);
-PrisonBreak.addWriter('Paul_Scheuring')
+PrisonBreak.addWriter('Nicholas_Wootton')
 PrisonBreak.addRating(10);
 PrisonBreak.addRating(9.9);
 PrisonBreak.addRating(9.8);
