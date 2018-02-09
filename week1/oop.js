@@ -62,12 +62,12 @@ class StaffMember {
   constructor(name, role, dateOfBirth) {
      this.name = name;
      this.rol = rol;
-    this.dateOfBirth = dateOfBirth;
+    this.dateOfBirth = new Date(dateOfBirth);
     this.movie = [];
   }
 
-  addMovie(movie) {
-    this.movie.push(movie);
+  addMovie(movieName) {
+    this.movie.push(movieName);
   }
 
   getName() {
