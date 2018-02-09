@@ -126,21 +126,19 @@ PrisonBreak.addRating (9.6);
 
 // checking the methods
 
-console.log (the_dark_knight.stars);
+console.log (PrisonBreak.stars);
 space ();
-console.log (the_dark_knight.getTitle ());
-console.log (the_dark_knight.getRating ());
-console.log (the_dark_knight.getWriter ());
-console.log (the_dark_knight.getDirector ());
+console.log (PrisonBreak.getTitle ());
+console.log (PrisonBreak.getRating ());
+console.log (PrisonBreak.getWriter ());
+console.log (PrisonBreak.getDirector ());
 space ();
 
 
 
 
 
-// // create and add more staff members
-// const writer = PrisonBreak.addWriter('Paul_Scheuring');
-// Make sure that the following actions work.
+
 console.log(Movie.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
 const director = Movie.getDirector();
 console.log(`Director: ${director.map(director => `${director.getName()}`)}`);
