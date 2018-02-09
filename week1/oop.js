@@ -91,6 +91,7 @@ const Writers = PrisonBreak.addWriter('Paul_Scheuring');
 const Dominic_Purcell = new StaffMember(...);
 const Wentworth_Miller = new StaffMember(...);
 const Robert_Knepper = new StaffMember(...);
+// adding information for a movie
 PrisonBreak.addStar(Dominic_Purcell);
 PrisonBreak.addStar(Wentworth_Miller);
 PrisonBreak.addStar(Robert_Knepper);
