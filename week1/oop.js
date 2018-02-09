@@ -10,21 +10,21 @@ space ();
  console.log("====================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥===================");
 //first my class Movies//
 class Movie {
-  constructor(title, director, stars = [], writer = [],  rating = []) {
+  constructor(title, director, stars = [], writer = [], rating = []) {
     
-    this.director = director; 
+    this.director = director;
     this.title = title;
-    this.stars =stars;
+    this.stars = stars;
     this.writer = writer;
     this.rating = rating;
     
     
   }
 
-    getTitle() {
+  getTitle() {
         
-      return `Movie title: ${this.title}`;
-    }
+    return `Movie title: ${this.title}`;
+  }
   
 
   getDirector() {
@@ -57,14 +57,15 @@ class Movie {
   }
 
   getAverageRating() {
-           let rateAverage = 0;
-           for (let i = 0; i < this.rating.length; i++) {
-             rateAverage += this.rating[i];
-           }
-           return `The Rating: ${rateAverage / this.rating.length}`;
+    let rateAverage = 0;
+    for (let i = 0; i < this.rating.length; i++) {
+      rateAverage += this.rating[i];
+    }
+    return `The Rating: ${rateAverage / this.rating.length}`;
+  }
 }
-
 //second my class Staff//
+
 class movieStaff {
   constructor(name, role, dateOfBirth) {
      this.name = name;
