@@ -98,7 +98,7 @@ class movieStaff {
 let Paul_Scheuring = new movieStaff('Paul Scheuring', 'director', 'November 20, 1968');
 let Dominic_Purcell = new movieStaff('Dominic Purcell', 'actor', '17 February 1970');
 let Robert_Knepper = new movieStaff('Robert Knepper', 'actor', 'July 8, 1959');
-
+let Wentworth_Miller = new movieStaff('Wentworth Miller','actor','June 2, 1972');
 
 
 
