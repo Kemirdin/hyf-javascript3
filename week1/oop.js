@@ -141,11 +141,11 @@ console.log (PrisonBreak.getDirector ());
 space ();
 
 
-// // checking the Staff methods
-// console.log (Robert_Knepper.getName ());
-// console.log (Robert_Knepper.getRole ());
-// console.log (Robert_Knepper.getAge);
-// space ();
+// checking the Staff methods
+console.log (Robert_Knepper.getName ());
+console.log (Robert_Knepper.getRole ());
+console.log (Robert_Knepper.getAge);
+space ();
 
 
 
