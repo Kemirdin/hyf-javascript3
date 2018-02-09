@@ -1,6 +1,6 @@
 'use strict';
-  <!-- 🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥 -->
 
+ console.log("===================🔥🔥🔥🔥 JavaScript Object-Oriented Programming Class🔥🔥🔥🔥====================");
 //first my class Movies//
 class Movie {
   constructor(title, director) {
