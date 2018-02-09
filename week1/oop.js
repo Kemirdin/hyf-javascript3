@@ -104,7 +104,11 @@ let Dominic_Purcell = new movieStaff('Dominic Purcell', 'actor', '17 February 19
 let Robert_Knepper = new movieStaff('Robert Knepper', 'actor', 'July 8, 1959');
 let Wentworth_Miller = new movieStaff('Wentworth Miller','actor','June 2, 1972');
 let Nicholas_Wootton = new movieStaff('Nicholas Wootton', 'writer', '03/21/1962');
-
+Paul_Scheuring.addMovie('Prison Break');
+Dominic_Purcell.addMovie('Prison Break');
+Robert_Knepper.addMovie('Prison Break');
+Wentworth_Miller.addMovie('Prison Break');
+Nicholas_Wootton.addMovie('Prison Break');
 
 
 
