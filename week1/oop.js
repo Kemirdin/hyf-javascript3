@@ -151,6 +151,6 @@ space ();
 
 // checking the requests
 
-console.log(the_dark_knight.getStars().map(actor => `${actor.getName()} ${actor.getAge}`))
-const director = the_dark_knight.getDirector();
+console.log(PrisonBreak.getStars().map(actor => `${actor.getName()} ${actor.getAge}`))
+const director = PrisonBreak.getDirector();
 console.log(`Director: ${director.map(dir => `${dir.getName()}`)}`);
