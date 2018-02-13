@@ -151,6 +151,10 @@ space ();
 
 // checking the requests
 
+/*
+
 console.log(PrisonBreak.getStars().map(actor => `${actor.getName()} ${actor.getAge}`))
 const director = PrisonBreak.getDirector();
 console.log(`Director: ${director.map(dir => `${dir.getName()}`)}`);
+
+*/
