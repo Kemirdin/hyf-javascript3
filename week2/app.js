@@ -7,11 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <title>Nobel Prizes</title>
+  <script src="app.js" defer/>;
+                      
 </head>
 
 <body>
   <div id="root"></div>
-  <script src="app.js"></script>
+  
 </body>
 
 </html>
