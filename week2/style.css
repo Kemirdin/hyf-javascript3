@@ -10,8 +10,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: url("https://octodex.github.com/images/mummytocat.gif");
-    background-size: auto;
+    background-image: url("https://media.giphy.com/media/l2SpZkQ0XT1XtKus0/giphy.gif");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -34,7 +33,7 @@ body {
     font-size: 0.375em;
     font-weight: bold;
     text-transform: uppercase;
-    color: #6426a7;
+    color: white;
 }
 
 #search {
