@@ -1,82 +1,138 @@
 * {
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    -ms-appearance: none !important;
-    -o-appearance: none !important;
-    appearance: none !important;
-    outline: none !important;
-    transition: 0.3s;
-    -o-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    font-family: 'Quicksand', sans-serif;
-}
-
-a {
-    text-decoration: none !important;
-}
-
-a:hover {
-    text-decoration: none !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: darkcyan;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url("https://octodex.github.com/images/mummytocat.gif");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font: 30px/1.375 "Lato", arial, sans-serif;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100vw;
 }
 
-#input-holder {
-    width: 200px;
-    height: 30px;
-    position: absolute;
-    top: 175px;
-    left: calc(50% - 100px);
-    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+.note {
+    font-size: 0.375em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6426a7;
 }
 
-#input-holder .children {
-    float: left;
+#search {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #8a44d5;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    padding: 0.5em 0.5em 0.5em 1em;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 500px;
 }
 
-#input {
-    width: 170px;
-    height: 30px;
-    background-color: #fcfcfc;
-    text-indent: 5px;
-    border: none;
+#search:hover,
+#search:focus {
+    background: #853cd3;
 }
 
-#input::-webkit-input-placeholder {
-    font-size: 12px;
+#search button,
+#search input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    outline: 0;
 }
 
-#input:-ms-input-placeholder {
-    font-size: 12px;
+#search button {
+    cursor: pointer;
+    padding: 0 0.25em;
 }
 
-#input::-ms-input-placeholder {
-    font-size: 12px;
+#search input {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
-#input::placeholder {
-    font-size: 12px;
+#search input::-webkit-input-placeholder {
+    color: #fff;
 }
 
-#link {
-    width: 175px;
-    height: 30px;
-    background-color: #fff;
-    position: absolute;
-    top: 250px;
-    left: calc(50% - 87.5px);
-    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    line-height: 30px;
-    padding-left: 10px;
+#search input:-ms-input-placeholder {
+    color: #fff;
 }
 
-#link i {
-    text-align: left;
-    line-height: 30px;
+#search input::-ms-input-placeholder {
+    color: #fff;
+}
+
+#search input::placeholder {
+    color: #fff;
+}
+
+#search .spinner {
+    -webkit-animation: spinner 1s infinite linear;
+    animation: spinner 1s infinite linear;
+    display: none;
+    padding: 0 0.25em;
+}
+
+#search.loading button {
+    display: none;
+}
+
+#search.loading .spinner {
+    display: block;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
