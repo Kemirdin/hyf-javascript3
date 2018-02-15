@@ -1,17 +1,41 @@
-//create request with its porperties
-var request = new httpRequest ();
-request.method = 'GET';
-request.url = 'https://api.github.com/orgs/HackYourFuture/repos';
+// Create the XHR object.
+function createCORSRequest (method, url) {
+  var xhr = new XMLHttpRequest ();
+  if ('withCredentials' in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open (method, url, true);
+  } else if (typeof XDomainRequest != 'undefined') {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest ();
+    xhr.open (method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
 
-//create callback for success containing the response
-request.success = function (response) {
-  console.log (response);
-};
+// Make the actual CORS request.
+function makeCorsRequest () {
+  // This is a sample server that supports CORS.
+  var url =
+    'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
 
-//and a fail callback containing the error
-request.fail = function (error) {
-  console.log (error);
-};
+  var xhr = createCORSRequest ('GET', url);
+  if (!xhr) {
+    alert ('CORS not supported');
+    return;
+  }
 
-//and finally send it away
-request.send ();
+  // Response handlers.
+  xhr.onload = function () {
+    var text = xhr.responseText;
+    alert ('Response from CORS request to ' + url + ': ' + text);
+  };
+
+  xhr.onerror = function () {
+    alert ('Woops, there was an error making the request.');
+  };
+
+  xhr.send ();
+}
