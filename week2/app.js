@@ -19,7 +19,7 @@ function createCORSRequest (method, url) {
 function makeCorsRequest () {
   // This is a sample server that supports CORS.
   var url =
-    'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+    'https://api.github.com/orgs/HackYourFuture/repos';
 
   var xhr = createCORSRequest ('GET', url);
   if (!xhr) {
