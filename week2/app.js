@@ -1,4 +1,5 @@
 "use strict";
+var body = window.document.getElementsByTagName("body")[0];
 var resultEl = document.querySelector("#resultEl");
 var loaderEl = document.getElementById("resultLoader");
 var search = document.getElementById('search');
