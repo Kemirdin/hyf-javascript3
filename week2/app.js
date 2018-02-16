@@ -1,4 +1,6 @@
-var search = document.getElementById ('search');
+"use strict";
+var resultEl = document.querySelector("#resultEl");
+var search = document.getElementById('search');
 var button = document.getElementById ('button');
 
 
