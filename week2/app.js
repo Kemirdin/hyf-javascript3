@@ -1,6 +1,6 @@
 var search = document.getElementById ('search');
 var button = document.getElementById ('button');
-var input = document.getElementById ('input');
+
 
 function loading () {
   search.classList.add ('loading');
@@ -23,7 +23,58 @@ var myRequest = new XMLHttpRequest();
 var myURL = 'https://api.github.com/orgs/HackYourFuture/repos';
 myRequest.open("GET", myURL);
 
-function createCORSRequest(method, url) {
+var errorMSG = 'Woops, there was an error making the request.';
+
+button.addEventListener("click", function () {
+
+  var input = document.getElementById('input');
+  if (isNaN(input)) {
+
+    // Check to see if the input is the word "all", which will request all the pet data.
+    if (input === "all") {
+      var submit = "all";
+    } else {
+      var submit = "sorry";
+      // Here's where our error message will be called.
+      alert(errorMSG);
+    }
+  }else {
+  var submit = parseInt(input);
+  }
+
+  var myRequest = new XMLHttpRequest();
+  myRequest.open("GET", ourURL);
+  myRequest.onload = function () {
+    var myData = JSON.parse(myRequest.responseText);
+    renderHTML(myData, submit);
+    console.log(myData);
+  };
+   myRequest.send();
+   });
+
+function renderHTML(data, amount) {
+  var htmlString = "";
+  if (amount == "all") {
+    var amount = data.length;
+  }
+  if (amount == "sorry") {
+    var amount = 0;
+  }
+  for (i = 0; i < amount; i++) {
+    htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes";
+    for (ii = 0; ii < data[i].foods.likes.length; ii++) {
+      htmlString += " " + data[i].foods.likes[ii] + " and";
+    }
+    htmlString = htmlString.slice(0, -4);
+    htmlString += ".</p>";
+  }
+  petContainer.insertAdjacentHTML("beforeend", htmlString);
+}
+
+
+
+
+  function createCORSRequest(method, url) {
   var xhr = new XMLHttpRequest ();
   if ('withCredentials' in xhr) {
     // XHR for Chrome/Firefox/Opera/Safari.
@@ -57,7 +108,7 @@ function makeCorsRequest () {
   };
 
   xhr.onerror = function () {
-    alert ('Woops, there was an error making the request.');
+    alert ();
   };
 
   xhr.send ();
