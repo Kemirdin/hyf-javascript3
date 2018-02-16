@@ -91,7 +91,7 @@ function renderHTML(data, amount) {
 //   }
 //   return xhr;
 // }
-*/
+
 // // Make the actual CORS request.
 // function makeCorsRequest () {
 //   // This is a sample server that supports CORS.
