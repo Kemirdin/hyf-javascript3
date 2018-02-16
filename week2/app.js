@@ -19,6 +19,8 @@ input.addEventListener ('keydown', function () {
 
 
 // Create the XHR object.
+var myRequest = new XMLHttpRequest();
+var ourURL = 'https://api.github.com/orgs/HackYourFuture/repos';
 function createCORSRequest (method, url) {
   var xhr = new XMLHttpRequest ();
   if ('withCredentials' in xhr) {
