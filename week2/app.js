@@ -84,7 +84,7 @@ button.addEventListener("click", function () {
     console.log(myData);
   };
    myRequest.send();
-   });
+   });*/
 
 function renderHTML(data, amount) {
   var htmlString = "";
@@ -102,7 +102,7 @@ function renderHTML(data, amount) {
     htmlString = htmlString.slice(0, -4);
     htmlString += ".</p>";
   }
-  petContainer.insertAdjacentHTML("beforeend", htmlString);
+  myContainer.insertAdjacentHTML("beforeend", htmlString);
 }
 
 
