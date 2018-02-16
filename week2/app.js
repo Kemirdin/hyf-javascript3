@@ -50,7 +50,9 @@ input.addEventListener ('keydown', function () {
   }
 })();
 
-var myRequest = new XMLHttpRequest();
+
+// this is my another myRequest but it was not work
+/*var myRequest = new XMLHttpRequest();
 var myURL = 'https://api.github.com/orgs/HackYourFuture/repos';
 myRequest.open("GET", myURL);
 
@@ -120,7 +122,7 @@ function renderHTML(data, amount) {
 //   }
 //   return xhr;
 // }
-
+*/
 // // Make the actual CORS request.
 // function makeCorsRequest () {
 //   // This is a sample server that supports CORS.
