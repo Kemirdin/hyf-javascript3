@@ -23,7 +23,7 @@ input.addEventListener ('keydown', function () {
 
 // Create the XHR object.
 
-function () {
+(function () {
   var httpRequest;
   document.getElementById("button").addEventListener('click', makeRequest);
 
