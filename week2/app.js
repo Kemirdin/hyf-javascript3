@@ -3,7 +3,7 @@ var resultEl = document.querySelector("#resultEl");
 var loaderEl = document.getElementById("resultLoader");
 var search = document.getElementById('search');
 var button = document.getElementById ('button');
-
+ var input = document.getElementById('input');
 
 function loading () {
   search.classList.add ('loading');
@@ -22,6 +22,34 @@ input.addEventListener ('keydown', function () {
 
 
 // Create the XHR object.
+
+function () {
+  var httpRequest;
+  document.getElementById("button").addEventListener('click', makeRequest);
+
+  function makeRequest() {
+    httpRequest = new XMLHttpRequest();
+
+    if (!httpRequest) {
+      alert('Giving up :( Cannot create an XMLHTTP instance');
+      return false;
+    }
+    httpRequest.onreadystatechange = alertContents;
+    httpRequest.open('GET', 'https://api.github.com/orgs/HackYourFuture/repos');
+    httpRequest.send();
+  }
+
+  function alertContents() {
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        alert(httpRequest.responseText);
+      } else {
+        alert('There was a problem with the request.');
+      }
+    }
+  }
+})();
+
 var myRequest = new XMLHttpRequest();
 var myURL = 'https://api.github.com/orgs/HackYourFuture/repos';
 myRequest.open("GET", myURL);
