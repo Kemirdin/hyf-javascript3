@@ -42,7 +42,7 @@ class Movie {
   }
 
   getStars() {
-    return `Movie Stars: ${this.stars}`;
+    return this.stars;
   }
 
   addWriter(writer) {
