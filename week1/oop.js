@@ -11,10 +11,10 @@ space ();
  
 //first my class Movies//
 class Movie {
-  constructor(title, director) {
+  constructor(FilmTitle, director) {
     
     this.director = director;
-    this.title = title;
+    this.FilmTitle = title;
     this.stars = [];
     this.writers = [];
     this.ratings = [];
