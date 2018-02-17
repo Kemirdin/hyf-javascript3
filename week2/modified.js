@@ -22,16 +22,16 @@ input.addEventListener ('keydown', function () {
 // Create the XHR object.
 
 (function () {
-  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,England';
-  var apiKey = 'APIKEY'; // Replace "APIKEY" with your own API key; otherwise, your HTTP request will not work
-  var httpRequest;
+ const url = 'https://api.github.com/orgs/HackYourFuture/repos';
+ //const apiKey = 'APIKEY'; 
+ const httpRequest;
   makeRequest ();
 
   // create and send an XHR request
   function makeRequest () {
     httpRequest = new XMLHttpRequest ();
     httpRequest.onreadystatechange = responseMethod;
-    httpRequest.open ('GET', url + '&appid=' + apiKey);
+    httpRequest.open ('GET', url  /* + '&appid=' + apiKey*/);
     httpRequest.send ();
   }
   // handle XHR response
