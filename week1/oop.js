@@ -45,7 +45,7 @@ class Movie {
     return this.stars;
   }
 
-  addWriter(writer) {
+  addWriters(writer) {
     this.writer.push(writer);
   }
 
@@ -120,13 +120,13 @@ const PrisonBreak = new Movie('Prison Break');
 PrisonBreak.addStars(Dominic_Purcell);
 PrisonBreak.addStars(Wentworth_Miller);
 PrisonBreak.addStars(Robert_Knepper);
-PrisonBreak.addWriter(Nicholas_Wootton);
+PrisonBreak.addWriters(Nicholas_Wootton);
 // PrisonBreak.addDirector(Paul_Scheuring);
-PrisonBreak.addRating(10);
-PrisonBreak.addRating(9.9);
-PrisonBreak.addRating(9.8);
-PrisonBreak.addRating(9.7);
-PrisonBreak.addRating (9.6);
+PrisonBreak.addRatings(10);
+PrisonBreak.addRatings(9.9);
+PrisonBreak.addRatings(9.8);
+PrisonBreak.addRatings(9.7);
+PrisonBreak.addRatings (9.6);
 
 
 
