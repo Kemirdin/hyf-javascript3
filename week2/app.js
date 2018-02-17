@@ -1,5 +1,5 @@
 "use strict";
-let body = window.document.getElementsByTagName("body");
+let body = window.document.getElementsByTagName("body").appendChild(body);
 let resultEl = document.querySelector("#resultEl");
 let loaderEl = document.getElementById("resultLoader");
 let search = document.getElementById('search');
