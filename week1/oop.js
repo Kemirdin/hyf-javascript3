@@ -50,7 +50,7 @@ class Movie {
   }
 
   getWriters() {
-    return `Movie writer: ${this.writer}`;
+    return this.writer;
   }
 
   addRating(num) {
