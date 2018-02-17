@@ -30,7 +30,7 @@ class Movie {
 
   getDirector() {
     
-    return `  Movie director: ${this.director}`;
+    return this.director;
       
   }
 
