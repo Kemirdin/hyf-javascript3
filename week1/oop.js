@@ -24,7 +24,7 @@ class Movie {
 
   getTitle() {
         
-    return this.title;
+    return this.FilmTitle;
   }
   
 
