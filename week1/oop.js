@@ -14,7 +14,7 @@ class Movie {
   constructor(FilmTitle, director) {
     
     this.director = director;
-    this.FilmTitle = title;
+    this.FilmTitle = FilmTitle;
     this.stars = [];
     this.writers = [];
     this.ratings = [];
