@@ -62,7 +62,7 @@ class Movie {
     for (let i = 0; i < this.ratings.length; i++) {
       rateAverage += this.ratings[i];
     }
-    return `The Rating: ${rateAverage / this.rating.length}`;
+    return `The Rating: ${rateAverage / this.ratings.length}`;
   }
 }
 //second my class Staff//
