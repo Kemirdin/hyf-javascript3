@@ -23,7 +23,7 @@
     }
     httpRequest.onreadystatechange = alertContents;
     httpRequest.open('GET', url);
-    const myData = JSON.parse (myRequest.responseText);
+    const myData = JSON.parse (httRequest.responseText);
 renderHTML (myData);
 
     httpRequest.send();
