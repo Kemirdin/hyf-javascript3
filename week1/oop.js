@@ -46,7 +46,7 @@ class Movie {
   }
 
   addWriters(writer) {
-    this.writer.push(writer);
+    this.writers.push(writer);
   }
 
   getWriters() {
