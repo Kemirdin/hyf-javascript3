@@ -125,8 +125,8 @@ PrisonBreak.addWriters(Nicholas_Wootton);
 PrisonBreak.addRating(10);
 PrisonBreak.addRating(9.9);
 PrisonBreak.addRating(9.8);
-PrisonBreak.addRatings(9.7);
-PrisonBreak.addRatings (9.6);
+PrisonBreak.addRating(9.7);
+PrisonBreak.addRating(9.6);
 
 
 
