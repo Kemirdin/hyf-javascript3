@@ -24,7 +24,7 @@ class Movie {
 
   getTitle() {
         
-    return `Movie title: ${this.title}`;
+    return this.title;
   }
   
 
@@ -67,7 +67,7 @@ class Movie {
 }
 //second my class Staff//
 
-class movieStaff {
+class MovieStaff {
   constructor(name, role, dateOfBirth) {
      this.name = name;
      this.role = role;
@@ -99,11 +99,11 @@ class movieStaff {
 
 
 // adding some staff
-let Paul_Scheuring = new movieStaff('Paul Scheuring', 'director', 'November 20, 1968');
-let Dominic_Purcell = new movieStaff('Dominic Purcell', 'actor', '17 February 1970');
-let Robert_Knepper = new movieStaff('Robert Knepper', 'actor', 'July 8, 1959');
-let Wentworth_Miller = new movieStaff('Wentworth Miller','actor','June 2, 1972');
-let Nicholas_Wootton = new movieStaff('Nicholas Wootton', 'writer', '03/21/1962');
+let Paul_Scheuring = new MovieStaff('Paul Scheuring', 'director', 'November 20, 1968');
+let Dominic_Purcell = new MovieStaff('Dominic Purcell', 'actor', '17 February 1970');
+let Robert_Knepper = new MovieStaff('Robert Knepper', 'actor', 'July 8, 1959');
+let Wentworth_Miller = new MovieStaff('Wentworth Miller','actor','June 2, 1972');
+let Nicholas_Wootton = new MovieStaff('Nicholas Wootton', 'writer', '03/21/1962');
 Paul_Scheuring.addMovie('Prison Break');
 Dominic_Purcell.addMovie('Prison Break');
 Robert_Knepper.addMovie('Prison Break');
@@ -147,6 +147,11 @@ console.log (Robert_Knepper.getRole ());
 console.log (Robert_Knepper.getAge());
 space ();
 
+console.log (
+  PrisonBreak.getStars ().map (
+    actor => `${actor.getName ()} ${actor.getAge ()}`
+  )
+);
 
 
 // checking the requests
