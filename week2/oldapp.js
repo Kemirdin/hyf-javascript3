@@ -22,7 +22,9 @@ input.addEventListener ('keydown', function () {
 // Create the XHR object.
 
 (function () {
-  let httpRequest;
+  const url = 'https://api.github.com/orgs/HackYourFuture/repos';
+  const httpRequest;
+
   document.getElementById("button").addEventListener('click', makeRequest);
 
   function makeRequest() {
@@ -33,7 +35,7 @@ input.addEventListener ('keydown', function () {
       return false;
     }
     httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'https://api.github.com/orgs/HackYourFuture/repos');
+    httpRequest.open('GET', url);
     httpRequest.send();
   }
 
