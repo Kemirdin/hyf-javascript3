@@ -50,11 +50,11 @@ class Movie {
   }
 
   getWriters() {
-    return this.writer;
+    return this.writers;
   }
 
   addRating(num) {
-    this.rating.push(num);
+    this.ratings.push(num);
   }
 
   getAverageRating() {
@@ -122,9 +122,9 @@ PrisonBreak.addStars(Wentworth_Miller);
 PrisonBreak.addStars(Robert_Knepper);
 PrisonBreak.addWriters(Nicholas_Wootton);
 // PrisonBreak.addDirector(Paul_Scheuring);
-PrisonBreak.addRatings(10);
-PrisonBreak.addRatings(9.9);
-PrisonBreak.addRatings(9.8);
+PrisonBreak.addRating(10);
+PrisonBreak.addRating(9.9);
+PrisonBreak.addRating(9.8);
 PrisonBreak.addRatings(9.7);
 PrisonBreak.addRatings (9.6);
 
