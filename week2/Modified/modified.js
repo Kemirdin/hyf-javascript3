@@ -23,7 +23,7 @@ input.addEventListener ('keydown', function () {
 
 (function () {
  const url = 'https://api.github.com/orgs/HackYourFuture/repos';
- //const apiKey = 'APIKEY'; 
+  
  const httpRequest;
   makeRequest ();
 
@@ -31,7 +31,7 @@ input.addEventListener ('keydown', function () {
   function makeRequest () {
     httpRequest = new XMLHttpRequest ();
     httpRequest.onreadystatechange = responseMethod;
-    httpRequest.open ('GET', url  /* + '&appid=' + apiKey*/);
+    httpRequest.open ('GET', url);
     httpRequest.send ();
   }
   // handle XHR response
@@ -40,4 +40,27 @@ input.addEventListener ('keydown', function () {
       console.log (httpRequest.responseText);
     }
   }
-}) ();
+})();
+
+$ ('button').on ('click', function () {
+  $ ('.repo-list').append ('<p class="loading">Loading...</p>');
+
+  $.ajax ({
+    method: 'GET',
+    url: 'https://api.github.com/repos/HackYourFuture/CommandLine',
+  })
+    .done (function (data) {
+      $.each (data, function (index, value) {
+        console.log (value);
+        $ ('ul').append ('<li>' + index + ':' + value + '</li>');
+        //other items go in here.
+      });
+    })
+    .fail (function () {
+      console.log ('fail');
+    })
+    .always (function () {
+      $ ('button').css ('color', 'red');
+      $ ('.loading').remove ();
+    });
+});

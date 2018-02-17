@@ -49,4 +49,3 @@ input.addEventListener ('keydown', function () {
     }
   }
 })();
-
