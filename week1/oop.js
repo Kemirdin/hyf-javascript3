@@ -68,8 +68,8 @@ class Movie {
 //second my class Staff//
 
 class MovieStaff {
-  constructor(name, role, dateOfBirth) {
-     this.name = name;
+  constructor(FilmName, role, dateOfBirth) {
+     this.FilmName = FilmName;
      this.role = role;
     this.dateOfBirth = new Date(dateOfBirth);
     this.movie = [];
