@@ -59,7 +59,7 @@ class Movie {
 
   getAverageRating() {
     let rateAverage = 0;
-    for (let i = 0; i < this.rating.length; i++) {
+    for (let i = 0; i < this.ratings.length; i++) {
       rateAverage += this.rating[i];
     }
     return `The Rating: ${rateAverage / this.rating.length}`;
@@ -80,7 +80,7 @@ class MovieStaff {
   }
 
   getName() {
-    return `Actor: ${this.name}`;
+    return `Actor: ${this.FilmName}`;
   }
 
   getRole() {
