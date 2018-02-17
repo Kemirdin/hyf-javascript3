@@ -16,8 +16,8 @@ class Movie {
     this.director = director;
     this.title = title;
     this.stars = [];
-    this.writer = [];
-    this.rating = [];
+    this.writers = [];
+    this.ratings = [];
     
     
   }
