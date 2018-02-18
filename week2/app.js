@@ -2,7 +2,7 @@
 
   //Search button
   const button = document.getElementById('button');
-const container = document.getElementById("getResults");
+ const container = document.getElementById("getResults");
   const search = document.getElementById ('search');
   search.addEventListener('click', makeRequest);
   
@@ -12,6 +12,7 @@ const input = document.getElementById('input');
 const url = 'https://api.github.com/repos/HackYourFuture/';
 
 document.getElementById("button").addEventListener('click', makeRequest);
+// Create the XHR object.
 
 function makeRequest() {
   const httpRequest = new XMLHttpRequest();
@@ -19,8 +20,8 @@ function makeRequest() {
   httpRequest.responseType = "json";
   httpRequest.send();
   httpRequest.onload = function () {
-    const repoData = httpRequest.response;
-    renderRepositories(repoData);
+    const data = httpRequest.response;
+    renderRepositories(data);
   };
   httpRequest.onerror = function () {
     httpRequest.statusText;

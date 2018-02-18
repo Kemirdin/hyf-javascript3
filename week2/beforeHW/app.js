@@ -1,29 +1,17 @@
 'use strict';
 
 //Search button
-const search = document.getElementById ('search');
-const button = document.getElementById ('button');
-const input = document.getElementById ('input');
-
-function loading () {
-  search.classList.add ('loading');
-
-  setTimeout (function () {
-    search.classList.remove ('loading');
-  }, 1500);
-}
-
-button.addEventListener ('click', loading);
-
-input.addEventListener ('keydown', function () {
-  if (event.keyCode == 13) loading ();
-});
+const newLogo = document.createElement('img');
+const newContainer = document.createElement ('div');
+const newButton = document.createElement ('button');
+const newInput = document.createElement ('input');
+const newSearch = document.createElement ('div');
 
 // Create the XHR object.
 
 (function () {
-  const url = 'https://api.github.com/orgs/HackYourFuture/repos';
-  const httpRequest;
+  const url = 'https://api.github.com/repos/HackYourFuture/';
+  const makeRequest;
 
   document.getElementById("button").addEventListener('click', makeRequest);
 
@@ -49,3 +37,9 @@ input.addEventListener ('keydown', function () {
     }
   }
 })();
+//create and append
+document.getElementById('logo').appendChild(newLogo);
+document.getElementById ('search').appendChild (newSearch);
+document.getElementById ('button').appendChild (newButton);
+document.getElementById ('input').appendChild (newInput);
+document.getElementById('getResults').appendChild(newContainer);
