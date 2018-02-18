@@ -19,16 +19,30 @@ function makeRequest() {
   httpRequest.responseType = "json";
   httpRequest.send();
   httpRequest.onload = function () {
-    const data = httpRequest.response;
-    renderRepositories(data);
+    const repoData = httpRequest.response;
+    renderRepositories(repoData);
+  };
+  httpRequest.onerror = function () {
+    httpRequest.statusText;
+
   };
   }
-  
-  function renderRepositories(val) {
-    const h1 = createAndAppend("h1", container, val.name);
-    const a = createAndAppend("a", container, val.html_url);
-    a.setAttribute("href", val.html_url);
+  // render repository button click
+
+  function renderRepositories(data) {
+     const h1 = createAndAppend("h1", getRsults, data.full_name);
+    const ul = createAndAppend("ul", getRsults);
+    const li = createAndAppend("li", ul);
+    const a = createAndAppend("a", li, data.html_url);
+    a.setAttribute("href", data.html_url);
     a.setAttribute("target", "_blank");
+    const xhrCont = new XMLHttpRequest();
+    xhrCont.open("GET", data.contributors_url);
+    xhrCont.send();
+    xhrCont.responseType = "json";
+    xhrCont.onload = function () {
+        const output = xhrCont.response;
+        getContributors(output);
 
 }     
   // create and append function
