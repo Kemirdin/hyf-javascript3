@@ -64,6 +64,7 @@ function getContributors (data) {
 }
     
   // create and append function
+    
   
 function createAndAppend (name, append, innerHTML) {
   const child = document.createElement (name);

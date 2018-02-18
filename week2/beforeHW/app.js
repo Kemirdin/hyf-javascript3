@@ -43,3 +43,25 @@ document.getElementById ('search').appendChild (newSearch);
 document.getElementById ('button').appendChild (newButton);
 document.getElementById ('input').appendChild (newInput);
 document.getElementById('getResults').appendChild(newContainer);
+// Create the XHR object.
+
+// (function () {
+//  const url = 'https://api.github.com/orgs/HackYourFuture/repos';
+
+//  const httpRequest;
+//   makeRequest ();
+
+//   // create and send an XHR request
+//   function makeRequest () {
+//     httpRequest = new XMLHttpRequest ();
+//     httpRequest.onreadystatechange = responseMethod;
+//     httpRequest.open ('GET', url);
+//     httpRequest.send ();
+//   }
+//   // handle XHR response
+//   function responseMethod () {
+//     if (httpRequest.readyState === 4) {
+//       console.log (httpRequest.responseText);
+//     }
+//   }
+// })();
