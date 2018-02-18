@@ -30,7 +30,7 @@ function makeRequest() {
   // render repository button click
 
   function renderRepositories(data) {
-     const h1 = createAndAppend("h1", getRsults, data.full_name);
+    const h1 = createAndAppend("h1", getRsults, data.full_name);
     const ul = createAndAppend("ul", getRsults);
     const li = createAndAppend("li", ul);
     const a = createAndAppend("a", li, data.html_url);
@@ -44,7 +44,24 @@ function makeRequest() {
         const output = xhrCont.response;
         getContributors(output);
 
-}     
+    }     
+//get contributer date function
+function getContributors (data) {
+  for (let i = 0; i < data.length; i++) {
+    const ul = createAndAppend ('ul', getRsults);
+    const li = createAndAppend ('li', ul);
+    const a = createAndAppend (
+      'a',
+      li,
+      '<hr><br>' + data[i].login + '<br><br>'
+    );
+    a.setAttribute ('href', data[i].html_url);
+    a.setAttribute ('target', '_blank');
+    const img = createAndAppend ('img', li);
+    img.setAttribute ('src', data[i].avatar_url);
+  }
+}
+    
   // create and append function
   
 function createAndAppend (name, append, innerHTML) {
