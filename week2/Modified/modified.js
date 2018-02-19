@@ -6,7 +6,7 @@ function makeRequest (url, methodType, callback) {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         console.log ('xhr done successfully');
-        var resp = xhr.responseText;
+        const resp = xhr.responseText;
         var respJson = JSON.parse (resp);
         callback (respJson);
       } else {
