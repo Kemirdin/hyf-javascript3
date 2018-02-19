@@ -1,5 +1,5 @@
 'use strict';
-{
+
   function makeRequest (url, methodType, callback) {
     const xhr = new XMLHttpRequest ();
     xhr.open (methodType, url, true);
@@ -26,7 +26,7 @@
     .addEventListener ('click', function () {
       // git hub url to get btford details
       const userId = document.getElementById ('userId').value;
-      const URL = 'https://api.github.com/orgs/HackYourFuture/' + userId;
+      const URL = 'https://api.github.com/users/' + userId;
       makeRequest (URL, 'GET', processUserDetailsResponse);
     });
 
@@ -34,7 +34,7 @@
     // git hub url to get btford details
     const userId = document.getElementById ('userId').value;
     const URL =
-      'https://api.github.com/orgs/HackYourFuture/' + userId + '/repos';
+      'https://api.github.com/users/' + userId + '/repos';
     makeRequest (URL, 'GET', processRepoListResponse);
   });
 
@@ -45,4 +45,4 @@
   function processRepoListResponse (repoList) {
     console.log ('render repo list', repoList);
   }
-}
+
