@@ -27,11 +27,16 @@ body>div {
 }
 
 h1 {
-    color: #aff;
+    text-align: center;
+    font-size: 3.5em;
+    color: #fff;
+    margin-top: 2em;
+    font-weight: 600;
 }
 
 h3 {
-    color: #9df;
+    font-size: 1.5em;
+    color: #fff;
 }
 
 input {
