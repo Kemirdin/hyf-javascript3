@@ -8,20 +8,17 @@
 </head>
 
 <body>
+<div style="white-space: nowrap; ">
+    <h1>Github User Search API</h1>
+    <h3>The fake search engine you never knew you wanted..</h3>
     <img src="https://digitalshilling.org/assets/images/github.png" alt="github-image" id="left-logo">
-    <div id="search">
-        <input id="input" placeholder="Search..." />
-        <button id="button">
-            <i class="fa fa-search"></i>
-        </button>
-        <div class="spinner">
-            <i class="fa fa-spinner"></i>
-        </div>
-    </div>
-    <div class="note">Click the button or hit enter.</div>
-    <div>
-    <button>Get Repo List</button>
-    <ul class="repo-list"></ul>
+    <br/>
+    <br/>
+    <button style="margin-left: 20px;" id="userDetails">Get User Details</button>
+    <input class="search" style="margin: 0 30px" type="text" />
+    <button id="repoList">Get Repositories </button>
+
+</div>
     </div>
 
     <script src=modified.js></script>
