@@ -7,7 +7,7 @@ function makeRequest (url, methodType, callback) {
       if (xhr.status === 200) {
         console.log ('xhr done successfully');
         const resp = xhr.responseText;
-        var respJson = JSON.parse (resp);
+        const respJson = JSON.parse (resp);
         callback (respJson);
       } else {
         console.log ('xhr failed');
@@ -21,15 +21,15 @@ function makeRequest (url, methodType, callback) {
 
 document.getElementById ('userDetails').addEventListener ('click', function () {
   // git hub url to get btford details
-  var userId = document.getElementById ('userId').value;
-  var URL = 'https://api.github.com/users/' + userId;
-  makeAjaxCall (URL, 'GET', processUserDetailsResponse);
+  const userId = document.getElementById ('userId').value;
+  const URL = 'https://api.github.com/users/' + userId;
+ makeRequest (URL, 'GET', processUserDetailsResponse);
 });
 
 document.getElementById ('repoList').addEventListener ('click', function () {
   // git hub url to get btford details
-  var userId = document.getElementById ('userId').value;
-  var URL = 'https://api.github.com/users/' + userId + '/repos';
+  const userId = document.getElementById ('userId').value;
+  const URL = 'https://api.github.com/users/' + userId + '/repos';
   makeRequest (URL, 'GET', processRepoListResponse);
 });
 
