@@ -8,10 +8,7 @@
 }
 
 body {
-    background-image: url("https://media.giphy.com/media/Ah3zHH7hvsSB2/giphy.gif");
-    /*background-image: url("https://media.giphy.com/media/l2SpZkQ0XT1XtKus0/giphy.gif");*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to left, #7df 10%, #2ac 90%);
     text-align: center;
     font-family: "Lato";
 }
