@@ -1,68 +1,53 @@
 'use strict';
-{
-    //Search button
-    const newLogo = document.createElement('img');
-    const newContainer = document.createElement('div');
-    const newButton = document.createElement('button');
-    const newInput = document.createElement('input');
-    const newSearch = document.createElement('div');
 
-    // Create the XHR object.
-
-    (function () {
-        const url = 'https://api.github.com/repos/HackYourFuture/';
-        const makeRequest;
-
-        document.getElementById("button").addEventListener('click', makeRequest);
-
-        function makeRequest() {
-            httpRequest = new XMLHttpRequest();
-
-            if (!httpRequest) {
-                alert('Giving up :( Cannot create an XMLHTTP instance');
-                return false;
-            }
-            httpRequest.onreadystatechange = alertContents;
-            httpRequest.open('GET', url);
-            httpRequest.send();
+  function makeMyXHR(url, methodType) {
+    const promiseObj = new Promise(function (resolve, reject) {
+      const xhr = new XMLHttpRequest();
+      xhr.open(methodType, url, true);
+      xhr.send();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('xhr done successfully');
+            const resp = xhr.responseText;
+            const respJson = JSON.parse(resp);
+            resolve(respJson);
+          } else {
+            reject(xhr.status);
+            console.log('xhr failed');
+          }
+        } else {
+          console.log('xhr processing going on');
         }
+      };
+      console.log('request sent succesfully');
+    });
 
-        function alertContents() {
-            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                if (httpRequest.status === 200) {
-                    alert(httpRequest.responseText);
-                } else {
-                    alert('There was a problem with the request.');
-                }
-            }
-        }
-    })();
-    //create and append
-    document.getElementById('logo').appendChild(newLogo);
-    document.getElementById('search').appendChild(newSearch);
-    document.getElementById('button').appendChild(newButton);
-    document.getElementById('input').appendChild(newInput);
-    document.getElementById('getResults').appendChild(newContainer);
-    // Create the XHR object.
+    return promiseObj;
+  }
 
-    // (function () {
-    //  const url = 'https://api.github.com/orgs/HackYourFuture/repos';
+  document.getElementById('userDetails').addEventListener('click', function () {
+    // git hub url to get btford details
+    const userId = document.getElementById('userId').value;
+    const URL = 'https://api.github.com/users/' + userId;
+    makeMyXHR(URL, 'GET').then(uerDetailsResponse, errorHandler);
+  });
 
-    //  const httpRequest;
-    //   makeRequest ();
+  document.getElementById('repoList').addEventListener('click', function () {
+    // git hub url to get btford details
+    const userId = document.getElementById('userId').value;
+    const URL = 'https://api.github.com/users/' + userId + '/repos';
+    makeMyXHR(URL, 'GET').then(repoListResponse, errorHandler);
+  });
 
-    //   // create and send an XHR request
-    //   function makeRequest () {
-    //     httpRequest = new XMLHttpRequest ();
-    //     httpRequest.onreadystatechange = responseMethod;
-    //     httpRequest.open ('GET', url);
-    //     httpRequest.send ();
-    //   }
-    //   // handle XHR response
-    //   function responseMethod () {
-    //     if (httpRequest.readyState === 4) {
-    //       console.log (httpRequest.responseText);
-    //     }
-    //   }
-    // })();
-}
+  function uerDetailsResponse(userData) {
+    console.log('render user details', userData);
+  }
+
+  function repoListResponse(repoList) {
+    console.log('render repo list', repoList);
+  }
+
+  function errorHandler(statusCode) {
+    console.log('failed with status', status);
+  }
