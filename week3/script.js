@@ -1,4 +1,5 @@
 'use strict';
+// Create the XHR object.
 
   function makeMyXHR(url, methodType) {
     const promiseObj = new Promise(function (resolve, reject) {
@@ -27,16 +28,16 @@
   }
 
   document.getElementById('userDetails').addEventListener('click', function () {
-    // git hub url to get btford details
+    
     const userId = document.getElementById('userId').value;
     const URL = 'https://api.github.com/users/' + userId;
     makeMyXHR(URL, 'GET').then(uerDetailsResponse, errorHandler);
   });
 
   document.getElementById('repoList').addEventListener('click', function () {
-    // git hub url to get btford details
+    
     const userId = document.getElementById('userId').value;
-    const URL = 'https://api.github.com/users/' + userId + '/repos';
+    const URL = 'https://api.github.com/orgs/HackYourFuture' + userId + '/repos';
     makeMyXHR(URL, 'GET').then(repoListResponse, errorHandler);
   });
 
