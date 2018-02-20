@@ -37,7 +37,7 @@
   document.getElementById('repoList').addEventListener('click', function () {
     
     const userId = document.getElementById('userId').value;
-    const URL = 'https://api.github.com/orgs/HackYourFuture' + userId + '/repos';
+    const URL = 'https://api.github.com/users/' + userId + '/repos';
     makeMyXHR(URL, 'GET').then(repoListResponse, errorHandler);
   });
 
