@@ -9,7 +9,7 @@
 
 body {
     background-image: linear-gradient(to left, #7df 10%, #2ac 90%);
-    /*background-color: darkcyan;*/
+    background-color: darkcyan;
     /*background-image: url("https://media.giphy.com/media/icHJFjLyJOS3K/giphy.gif");*/
     background-repeat: no-repeat;
     background-size: cover;
