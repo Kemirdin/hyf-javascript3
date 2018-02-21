@@ -10,7 +10,8 @@ function makeRequest (url, methodType, callback) {
         console.log ('xhr done successfully');
         const resp = xhr.responseText;
         const respJson = JSON.parse (resp);
-        callback (respJson);
+        callback(respJson);
+        
       } else {
         console.log ('xhr failed');
       }
