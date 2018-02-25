@@ -1,6 +1,6 @@
 'use strict';
 
-function makeRequest (url, methodType, callback) {
+function makeRequest(url, methodType, callback) {
   const xhr = new XMLHttpRequest ();
   xhr.open (methodType, url, true);
   xhr.send ();
@@ -11,7 +11,6 @@ function makeRequest (url, methodType, callback) {
         const resp = xhr.responseText;
         const respJson = JSON.parse (resp);
         callback (respJson);
-        
       } else {
         console.log ('xhr failed');
       }
