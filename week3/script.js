@@ -29,8 +29,8 @@ function makeMyXHR (url, methodType) {
 
 document.getElementById ('userDetails').addEventListener ('click', function () {
   const userId = document.getElementById ('userId').value;
-  const URL = 'https://api.github.com/users/' + userId;
-  makeMyXHR (URL, 'GET').then (uerDetailsResponse, errorHandler);
+  const url = 'https://api.github.com/users/' + userId;
+  makeMyXHR (url, 'GET').then (uerDetailsResponse, errorHandler);
 });
 
 document.getElementById ('repoList').addEventListener ('click', function () {
