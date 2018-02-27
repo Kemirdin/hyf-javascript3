@@ -21,7 +21,7 @@ function makeMyXHR (url, methodType) {
         console.log ('xhr processing going on');
       }
     };
-    console.log ('request sent succesfully');
+    console.log ('request sent successfully');
   });
 
   return promiseObj;
@@ -35,8 +35,8 @@ document.getElementById ('userDetails').addEventListener ('click', function () {
 
 document.getElementById ('repoList').addEventListener ('click', function () {
   const userId = document.getElementById ('userId').value;
-  const URL = 'https://api.github.com/users/' + userId + '/repos';
-  makeMyXHR (URL, 'GET').then (repoListResponse, errorHandler);
+  const url = 'https://api.github.com/users/' + userId + '/repos';
+  makeMyXHR (url, 'GET').then (repoListResponse, errorHandler);
 });
 
 function uerDetailsResponse (userData) {
