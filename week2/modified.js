@@ -18,7 +18,7 @@ function makeRequest(url, methodType, callback) {
       console.log ('xhr processing going on');
     }
   };
-  console.log ('request sent succesfully');
+  console.log('request sent successfully');
 }
 
 document.getElementById ('userDetails').addEventListener ('click', function () {
