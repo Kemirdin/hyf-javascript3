@@ -37,7 +37,7 @@
     });
   }
   function hyfListResponse () {
-    fetchJSON ("https://api.github.com/repos/HackYourFuture/" + githubSearch.value).then (data => {
+    fetchJSON ("https://api.github.com/repos/HackYourFuture/" + githubSearch.value).then(data => {
       if (data.message) {
         githubUsers.innerHTML = '';
         githubRep.innerHTML = '';
