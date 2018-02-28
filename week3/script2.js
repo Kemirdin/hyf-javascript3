@@ -38,7 +38,7 @@
       if (data.message) {
         githubUsers.innerHTML = '';
         githubRep.innerHTML = '';
-        createAndAppend ('h1', githubRep, 'this repository does not exist ');
+        createAndAppend ('h1', githubRep, 'this repository has been disabled,could you please try "Get User Details" button');
       } else {
         githubRep.innerHTML = '';
         githubUsers.innerHTML = '';
