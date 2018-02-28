@@ -14,7 +14,7 @@
     .getElementById ('hyfList')
     .addEventListener ('click', hyfListResponse, true);
 
-  function fetchJSON (url) {
+  function getJSON (url) {
     // Return a new promise.
 
     return new Promise ((resolve, reject) => {
@@ -23,21 +23,32 @@
       req.open ('GET', url);
       req.responseType = 'json';
 
-      req.onload = () =>
-        // Resolve the promise with the response text
-        resolve (req.response);
+      req.onload = function () {
+        // This is called even on 404 etc
+        // so check the status
+        if (req.status == 200) {
+          // Resolve the promise with the response text
+          resolve (req.response);
+        } else {
+          // Otherwise reject with the status text
+          // which will hopefully be a meaningful error
+          reject (Error (req.statusText));
+        }
+      };
 
-      // Otherwise reject with the status text
-      // which will hopefully be a meaningful error
       // Handle network errors
-      req.onerror = () => reject (req.statusText);
+      req.onerror = function () {
+        reject (Error ('Network Error'));
+      };
 
       // Make the request
       req.send ();
     });
   }
   function hyfListResponse () {
-    fetchJSON ("https://api.github.com/repos/HackYourFuture/" + githubSearch.value).then(data => {
+    getJSON (
+      'https://api.github.com/repos/HackYourFuture/' + githubSearch.value
+    ).then (data => {
       if (data.message) {
         githubUsers.innerHTML = '';
         githubRep.innerHTML = '';
@@ -61,7 +72,7 @@
         createAndAppend ('h3', githubRep, 'On Branch : ' + data.default_branch);
         createAndAppend ('h3', githubRep, hyfRepLink);
 
-        fetchJSON (contributorsUrl).then (data => {
+        getJSON (contributorsUrl).then (data => {
           createAndAppend ('h2', githubRep, 'Contributors : ');
 
           data.forEach (element => {
@@ -82,7 +93,7 @@
   }
 
   function uerDetailsResponse () {
-    fetchJSON (
+    getJSON (
       'https://api.github.com/users/' + githubSearch.value + '/repos'
     ).then (data => {
       if (data.message) {
@@ -131,7 +142,7 @@
 
           createAndAppend ('h1', repositoryDiv, '<br>' + 'Contributors : ');
 
-          fetchJSON (data[key].contributors_url).then (contData => {
+          getJSON (data[key].contributors_url).then (contData => {
             for (let i = 0; i < contData.length; i++) {
               const ContributorName = document.createElement ('h2');
               const ContributorPic = document.createElement ('img');
