@@ -1,7 +1,7 @@
 'use strict';
 
 {
-  const githubSearch = document.getElementById ('input');
+  //   const githubSearch = document.getElementById ('input');
 
   const githubUsers = document.getElementById ('githubUsers');
   const githubRep = document.getElementById ('githubRep');
@@ -26,7 +26,7 @@
       req.onload = function () {
         // This is called even on 404 etc
         // so check the status
-        if (req.status == 200) {
+        if (req.status === 200) {
           // Resolve the promise with the response text
           resolve (req.response);
         } else {
@@ -47,7 +47,8 @@
   }
   function hyfListResponse () {
     getJSON (
-      'https://api.github.com/repos/HackYourFuture/' + githubSearch.value
+      'https://api.github.com/repos/HackYourFuture/' +
+        document.getElementById ('input')
     ).then (data => {
       if (data.message) {
         githubUsers.innerHTML = '';
@@ -94,7 +95,9 @@
 
   function uerDetailsResponse () {
     getJSON (
-      'https://api.github.com/users/' + githubSearch.value + '/repos'
+      'https://api.github.com/users/' +
+        document.getElementById ('input') +
+        '/repos'
     ).then (data => {
       if (data.message) {
         githubUsers.innerHTML = '';
