@@ -33,7 +33,7 @@
   function hyfListResponse () {
     getJSON (
       'https://api.github.com/repos/HackYourFuture/' +
-        document.getElementById ('input')
+        document.getElementById ('userId').value
     ).then (data => {
       if (data.message) {
         githubUsers.innerHTML = '';
@@ -81,7 +81,7 @@
   function uerDetailsResponse () {
     getJSON (
       'https://api.github.com/users/' +
-        document.getElementById ('input') +
+        document.getElementById ('userId').value +
         '/repos'
     ).then (data => {
       if (data.message) {
@@ -105,7 +105,7 @@
         userLink.innerHTML = '<h3>' + 'Visit user' + '</h3>';
 
         githubUsers.appendChild (userLink);
-        // createAndAppend('h3', users, '<a href="' + data[0].owner.html_url + '">' + 'visit user' + '</a>');
+
         createAndAppend ('h1', githubUsers, 'Repositories :');
 
         for (const key in data) {
